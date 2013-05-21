@@ -1,0 +1,22 @@
+upstream node_hello {
+  server localhost:8080;
+  server localhost:8081;
+  server localhost:8082;
+  server localhost:8083;
+}
+
+server {
+  listen 80;
+
+  root /home/tom/code/node-in-production/src;
+
+  server_name localhost;
+
+  location @upstream {
+    proxy_pass http://node_hello;
+  }
+
+  location / {
+    try_files $uri @upstream;
+  }
+}
