@@ -1,0 +1,41 @@
+# Node In Production
+
+# Node is good at loads of stuff
+* Why is everyone focusing on sending HTML to the browser?
+
+# How we use Node at SkyBet
+* Processing feeds
+* Collecting stats
+    * Inherently async; would be really difficult with PHP
+* (Almost) serving internal web app
+
+# Architecting Node apps
+* Node modules!
+* Testability?
+
+# Deploying Node
+* NFS? RPMs?
+
+# Keeping Node running
+* Supervisord
+* Upstart
+
+# As a web application server
+
+## Difference between Node and 'traditional' stacks like PHP
+
+### Node doesn't scale across cores by default
+* Web server and app are in one process
+    * Which has up-sides and down-sides
+* You need to load-balance multiple processes
+* Varnish or Nginx
+    * Example
+* Gets you redundancy too
+* But now you need central session storage
+    * Redis; because redis is awesome
+
+# As a processing daemon
+* Using message queues
+    * Exclusive queues / locks
+
+# Bonus?
