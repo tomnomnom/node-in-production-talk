@@ -38,4 +38,8 @@
 * Using message queues
     * Exclusive queues / locks
 
+# Monitoring
+* Stats interfaces
+* Logs
+
 # Bonus?
