@@ -1,0 +1,23 @@
+ ╔═════════════════════════╦═════════════════════════════════════╗
+ ║ Keeping your baby alive ║                                     ║
+ ╠═════════════════════════╝                                     ║
+ ║                                                               ║
+ ║  ● Supervisor to the rescue!                                  ║
+ ║                                                               ║
+ ║                                                               ║
+ ║      ▶ sudo apt-get install supervisord                       ║
+ ║      ▶ sudo vim /etc/supervisor/conf.d/node-hello.conf        ║
+ ║                                                               ║
+ ║        [program:node-hello]                                   ║
+ ║        command=nodejs hello.js                                ║
+ ║        directory=/home/tom/code/node-in-production/src        ║
+ ║        user=tom                                               ║
+ ║                                                               ║
+ ║      ▶ sudo supervisorctl reload                              ║
+ ║                                                               ║
+ ║                                                               ║
+ ║                                                               ║
+ ║                                                               ║
+ ║                                                               ║
+ ║                                                               ║
+ ╚═══════════════════════════════════════════════════════════════╝
