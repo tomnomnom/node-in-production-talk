@@ -1,0 +1,23 @@
+ ╔══════════════════════════╦════════════════════════════════════╗
+ ║ A load-balanced Node app ║                                    ║
+ ╠══════════════════════════╝                                    ║
+ ║                                                               ║
+ ║  ● Requests come in                                           ║
+ ║  ● Load Balancer responds; proxies to a Node app              ║
+ ║                                                               ║
+ ║    ┌─────────┐                           ┌──────────┐         ║
+ ║    │ Request ├──┐                     ┌─▷│ Node App │         ║
+ ║    └─────────┘  │  ┌┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┐  │  └──────────┘         ║
+ ║    ┌─────────┐  └─▷┊               ├──┘  ┌──────────┐         ║
+ ║    │ Request ├────▷┊ Load Balancer ├────▷│ Node App │         ║
+ ║    └─────────┘  ┌─▷┊               ├──┐  └──────────┘         ║
+ ║    ┌─────────┐  │  └┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┘  │  ┌──────────┐         ║
+ ║    │ Request ├──┘                     └─▷│ Node App │         ║
+ ║    └─────────┘                           └──────────┘         ║
+ ║                                                               ║
+ ║                                                               ║
+ ║  ● Seperation between load balancer and application           ║
+ ║  ● Even if your code breaks, the load balancer still answers  ║
+ ║  ● If one Node app is running, you're serving your customers  ║
+ ║                                                               ║
+ ╚═══════════════════════════════════════════════════════════════╝
