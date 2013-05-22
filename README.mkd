@@ -1,0 +1,5 @@
+# Node In Production
+
+Slides and things from my 'Node In Production' talk at NodeUpNorth on 2013-05-22.
+
+http://www.meetup.com/NodeUpNorth/events/118150302/
