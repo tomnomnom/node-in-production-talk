@@ -9,16 +9,8 @@
     * Inherently async; would be really difficult with PHP
 * (Almost) serving internal web app
 
-# Architecting Node apps
-* Node modules!
-* Testability?
-
-# Deploying Node
-* NFS? RPMs?
-
 # Keeping Node running
 * Supervisord
-* Upstart
 
 # As a web application server
 
