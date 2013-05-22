@@ -1,0 +1,23 @@
+ ╔═════════════════╦═════════════════════════════════════════════╗
+ ║ Nginx balancing ║                                             ║
+ ╠═════════════════╝                                             ║
+ ║                                                               ║
+ ║    upstream node_hello {                                      ║
+ ║      server localhost:8080;                                   ║
+ ║      server localhost:8081;                                   ║
+ ║      server localhost:8082;                                   ║
+ ║      server localhost:8083;                                   ║
+ ║    }                                                          ║
+ ║                                                               ║
+ ║    server {                                                   ║
+ ║      listen 80;                                               ║
+ ║                                                               ║
+ ║      server_name localhost;                                   ║
+ ║                                                               ║
+ ║      location / {                                             ║
+ ║        proxy_pass http://node_hello;                          ║
+ ║      }                                                        ║
+ ║    }                                                          ║
+ ║                                                               ║
+ ║                                                               ║
+ ╚═══════════════════════════════════════════════════════════════╝
